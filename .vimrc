@@ -4,7 +4,6 @@ set encoding=utf-8
 set showcmd                     " display inclomplete commands
 filetype plugin indent on       " load file type plugins + indentation
 set nu                          " show line numbers
-"set cul
 
 set nowrap                      " don't wrap lines
 set tabstop=4 shiftwidth=4      " size of tab
@@ -23,4 +22,10 @@ set hlsearch			        " highlight matches
 set incsearch			        " incremental search
 set ignorecase
 set smartcase
-"set go-=T
+
+" For gvim
+if has('gui_running')
+    set go-=T           " hide the toolbar
+    set cul             " highlight the current line
+endif
+
